@@ -1,0 +1,323 @@
+{
+    "meta": {
+        "format_version": "4.10",
+        "model_format": "modded_entity",
+        "box_uv": true
+    },
+    "name": "gift_box",
+    "model_identifier": "",
+    "modded_entity_entity_class": "",
+    "modded_entity_version": "1.12",
+    "modded_entity_flip_y": true,
+    "visible_box": [
+        1,
+        1,
+        0
+    ],
+    "variable_placeholders": "",
+    "variable_placeholder_buttons": [],
+    "timeline_setups": [],
+    "unhandled_root_fields": {},
+    "resolution": {
+        "width": 64,
+        "height": 64
+    },
+    "elements": [
+        {
+            "name": "cover",
+            "box_uv": true,
+            "rescale": false,
+            "locked": false,
+            "light_emission": 0,
+            "render_order": "default",
+            "allow_mirror_modeling": true,
+            "from": [
+                -8,
+                9,
+                -8
+            ],
+            "to": [
+                8,
+                14,
+                8
+            ],
+            "autouv": 0,
+            "color": 7,
+            "origin": [
+                -5,
+                5,
+                -6
+            ],
+            "faces": {
+                "north": {
+                    "uv": [
+                        16,
+                        16,
+                        32,
+                        21
+                    ],
+                    "texture": 0
+                },
+                "east": {
+                    "uv": [
+                        0,
+                        16,
+                        16,
+                        21
+                    ],
+                    "texture": 0
+                },
+                "south": {
+                    "uv": [
+                        48,
+                        16,
+                        64,
+                        21
+                    ],
+                    "texture": 0
+                },
+                "west": {
+                    "uv": [
+                        32,
+                        16,
+                        48,
+                        21
+                    ],
+                    "texture": 0
+                },
+                "up": {
+                    "uv": [
+                        32,
+                        16,
+                        16,
+                        0
+                    ],
+                    "texture": 0
+                },
+                "down": {
+                    "uv": [
+                        48,
+                        0,
+                        32,
+                        16
+                    ],
+                    "texture": 0
+                }
+            },
+            "type": "cube",
+            "uuid": "4e1f8d95-d548-5ef9-81f1-40ed99718fdc"
+        },
+        {
+            "name": "gift_cow",
+            "box_uv": true,
+            "rescale": false,
+            "locked": false,
+            "light_emission": 0,
+            "render_order": "default",
+            "allow_mirror_modeling": true,
+            "from": [
+                -8,
+                14.25,
+                -8
+            ],
+            "to": [
+                8,
+                14.25,
+                8
+            ],
+            "autouv": 0,
+            "color": 2,
+            "origin": [
+                0,
+                14.25,
+                0
+            ],
+            "uv_offset": [
+                0,
+                21
+            ],
+            "faces": {
+                "north": {
+                    "uv": [
+                        16,
+                        37,
+                        32,
+                        37
+                    ],
+                    "texture": 0
+                },
+                "east": {
+                    "uv": [
+                        0,
+                        37,
+                        16,
+                        37
+                    ],
+                    "texture": 0
+                },
+                "south": {
+                    "uv": [
+                        48,
+                        37,
+                        64,
+                        37
+                    ],
+                    "texture": 0
+                },
+                "west": {
+                    "uv": [
+                        32,
+                        37,
+                        48,
+                        37
+                    ],
+                    "texture": 0
+                },
+                "up": {
+                    "uv": [
+                        32,
+                        37,
+                        16,
+                        21
+                    ],
+                    "texture": 0
+                },
+                "down": {
+                    "uv": [
+                        48,
+                        21,
+                        32,
+                        37
+                    ],
+                    "texture": 0
+                }
+            },
+            "type": "cube",
+            "uuid": "499b01fd-5f4a-034d-b23c-c75cdf8008b7"
+        },
+        {
+            "name": "body",
+            "box_uv": true,
+            "rescale": false,
+            "locked": false,
+            "light_emission": 0,
+            "render_order": "default",
+            "allow_mirror_modeling": true,
+            "from": [
+                -7,
+                0,
+                -7
+            ],
+            "to": [
+                7,
+                9,
+                7
+            ],
+            "autouv": 0,
+            "color": 7,
+            "origin": [
+                -5,
+                0,
+                -6
+            ],
+            "uv_offset": [
+                0,
+                37
+            ],
+            "faces": {
+                "north": {
+                    "uv": [
+                        14,
+                        51,
+                        28,
+                        60
+                    ],
+                    "texture": 0
+                },
+                "east": {
+                    "uv": [
+                        0,
+                        51,
+                        14,
+                        60
+                    ],
+                    "texture": 0
+                },
+                "south": {
+                    "uv": [
+                        42,
+                        51,
+                        56,
+                        60
+                    ],
+                    "texture": 0
+                },
+                "west": {
+                    "uv": [
+                        28,
+                        51,
+                        42,
+                        60
+                    ],
+                    "texture": 0
+                },
+                "up": {
+                    "uv": [
+                        28,
+                        51,
+                        14,
+                        37
+                    ],
+                    "texture": 0
+                },
+                "down": {
+                    "uv": [
+                        42,
+                        37,
+                        28,
+                        51
+                    ],
+                    "texture": 0
+                }
+            },
+            "type": "cube",
+            "uuid": "05fd1ea5-dcaf-a38f-fc1f-0c58802d8666"
+        }
+    ],
+    "outliner": [
+        "4e1f8d95-d548-5ef9-81f1-40ed99718fdc",
+        "05fd1ea5-dcaf-a38f-fc1f-0c58802d8666",
+        "499b01fd-5f4a-034d-b23c-c75cdf8008b7"
+    ],
+    "textures": [
+        {
+            "path": "C:\\Users\\masit\\IdeaProjects\\BTA-Paperwork\\src\\main\\resources\\assets\\paperwork\\textures\\entity\\cardboard_box\\gift_box\\red.png",
+            "name": "red.png",
+            "folder": "",
+            "namespace": "",
+            "id": "0",
+            "group": "",
+            "width": 64,
+            "height": 64,
+            "uv_width": 64,
+            "uv_height": 64,
+            "particle": false,
+            "use_as_default": false,
+            "layers_enabled": false,
+            "sync_to_project": "",
+            "render_mode": "default",
+            "render_sides": "auto",
+            "pbr_channel": "color",
+            "frame_time": 1,
+            "frame_order_type": "loop",
+            "frame_order": "",
+            "frame_interpolate": false,
+            "visible": true,
+            "internal": true,
+            "saved": true,
+            "uuid": "a5ffa2eb-7d16-1325-08e6-f65abda11ff4",
+            "relative_path": "../IdeaProjects/BTA-Paperwork/src/main/resources/assets/paperwork/textures/entity/cardboard_box/gift_box/red.png",
+            "source": "data:image/png;base64,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"
+        }
+    ]
+}
