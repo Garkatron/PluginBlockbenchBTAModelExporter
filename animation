@@ -1,0 +1,110 @@
+/*codec.compileAnimations = function (animations = Animation.all) {
+               let R = Templates.getVariableRegex;
+               let identifier = getIdentifier();
+               let interpolations = AnimationTemplates.get('interpolations');
+
+               let file = AnimationTemplates.get('file');
+               file = file.replace(R('bb_version'), Blockbench.version);
+               file = file.replace(R('author'), Settings.get('username') || 'Author');
+               file = file.replace(R('identifier'), identifier);
+
+               let anim_strings = [];
+               animations.forEach(animation => {
+                   let anim_string = AnimationTemplates.get('animation');
+                   anim_string = anim_string.replace(R('name'), animation.name);
+                   anim_string = anim_string.replace(R('length'), F(animation.length));
+                   anim_string = anim_string.replace(R('looping'), animation.loop == 'loop' ? AnimationTemplates.get('looping') : '');
+
+                   let channel_strings = [];
+                   let channel_types = AnimationTemplates.get('channel_types');
+                   for (let id in animation.animators) {
+                       let animator = animation.animators[id];
+                       if (animator instanceof BoneAnimator == false) continue;
+
+                       for (let channel_id in channel_types) {
+                           if (!(animator[channel_id] && animator[channel_id].length)) continue;
+                           let keyframes = animator[channel_id].slice().sort((a, b) => a.time - b.time);
+                           let keyframe_strings = [];
+                           function addKeyframe(time, x, y, z, interpolation) {
+                               let kf_string = AnimationTemplates.get('keyframe_' + channel_id);
+                               kf_string = kf_string.replace(R('time'), F(time));
+                               kf_string = kf_string.replace(R('x'), F(x));
+                               kf_string = kf_string.replace(R('y'), F(y));
+                               kf_string = kf_string.replace(R('z'), F(z));
+                               kf_string = kf_string.replace(R('interpolation'), interpolations[interpolation] || interpolations.linear);
+                               keyframe_strings.push(kf_string);
+                           }
+
+                           keyframes.forEach((kf, i) => {
+                               addKeyframe(kf.time, kf.calc('x'), kf.calc('y'), kf.calc('z'), kf.interpolation);
+                               if (kf.data_points[1]) {
+                                   addKeyframe(kf.time + 0.001, kf.calc('x', 1), kf.calc('y', 1), kf.calc('z', 1), kf.interpolation);
+                               } else if (kf.interpolation == 'step' && keyframes[i + 1]) {
+                                   let next = keyframes[i + 1];
+                                   addKeyframe(next.time - 0.001, kf.calc('x'), kf.calc('y'), kf.calc('z'), 'linear');
+                               }
+                           })
+
+                           let channel_string = AnimationTemplates.get('channel');
+                           channel_string = channel_string.replace(R('name'), animator.name);
+                           channel_string = channel_string.replace(R('channel_type'), channel_types[channel_id]);
+                           channel_string = channel_string.replace(R('keyframes'), '\n\t\t\t' + keyframe_strings.join(',\n\t\t\t') + '\n\t\t');
+
+                           channel_strings.push(channel_string);
+                       }
+                   }
+
+                   anim_string = anim_string.replace(R('channels'), '\n\t\t' + channel_strings.join('\n\t\t') + '\n\t\t');
+
+                   anim_strings.push(anim_string);
+               })
+               file = file.replace(R('animations'), anim_strings.join('\n\n\t'));
+               return file;
+           }*/
+
+/*
+new Action('export_bta_modded_animations', {
+icon: 'free_breakfast',
+category: 'file',
+condition: () => Format == format,
+click() {
+    let form = {};
+    let keys = [];
+    let animations = Animation.all.slice();
+    if (Format.animation_files) animations.sort((a1, a2) => a1.path.hashCode() - a2.path.hashCode());
+    animations.forEach(animation => {
+        let key = animation.name;
+        keys.push(key)
+        form[key.hashCode()] = { label: key, type: 'checkbox', value: true };
+    })
+    let dialog = new Dialog({
+        id: 'animation_export',
+        title: 'dialog.animation_export.title',
+        form,
+        onConfirm(form_result) {
+            dialog.hide();
+            keys = keys.filter(key => form_result[key.hashCode()]);
+            let animations = keys.map(k => Animation.all.find(anim => anim.name == k));
+            let content = Codecs.modded_entity.compileAnimations(animations);
+            Blockbench.export({
+                resource_id: 'modded_animation',
+                type: 'BTA Modded Entity Animation',
+                extensions: ['java'],
+                name: (Project.geometry_name || 'model'),
+                content,
+            })
+        }
+    })
+    form.select_all_none = {
+        type: 'buttons',
+        buttons: ['generic.select_all', 'generic.select_none'],
+        click(index) {
+            let values = {};
+            keys.forEach(key => values[key.hashCode()] = (index == 0));
+            dialog.setFormValues(values);
+        }
+    }
+    dialog.show();
+}
+})*/
+
